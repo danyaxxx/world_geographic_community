@@ -1,0 +1,160 @@
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    width: 100%;
+    max-width: 980px;
+    display: block;
+    outline: 1px solid black;
+    margin: 0 auto;
+}
+.header {
+    margin: 0 auto;
+    width: 100%;
+}
+.header-top {
+    background: #828282;
+    padding: 2px 20px;
+    display: flex;
+    align-items: center;
+}
+.header-top__logo {
+    height: 40px;
+}
+.header-top__support {
+    color: #fff;
+    font-size: 10px;
+    margin-left: 15px;
+}
+.header-top__phone {
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+.header-content__img {
+    width: 18%;
+}
+.header-content__text {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 28px;
+    color: #568ecc;
+    text-align: center;
+    width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.nav {
+    margin: 0 auto;
+    width: 100%;
+}
+.nav-inner {
+    width: 100%;
+    background: #568ecc;
+    padding: 0 20px;
+}
+.nav-items {
+    display: flex;
+    justify-content: center;
+}
+.nav-items__item {
+    padding: 15px;
+    text-align: center;
+}
+.nav-items__item a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+.nav-items__item a.active, .nav-items__item a:hover {
+    border-bottom: 1px solid white;
+}
+.nav__menu {
+    padding: 8px 0;
+    height: 40px;
+    display: none;
+    fill: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+    .header-top, .header-content {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .header-top__phone {
+        font-size: 18px;
+    }
+    .header-content__text {
+        width: 100%;
+    }
+    .nav__menu {
+        display: block;
+    }
+    .nav-items {
+        display: none;
+        flex-wrap: wrap;
+    }
+    .nav-items.active {
+        display: flex;
+    }
+    .nav-items__item {
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .header-top__support {
+        display: none;
+    }
+    .header-content {
+        display: block;
+    }
+    .header-content__img {
+        width: 40%;
+        margin: 0 auto;
+        display: block;
+    }
+    .header-content__text {
+        width: 100%;
+    }
+}
