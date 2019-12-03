@@ -1,12 +1,12 @@
 body {
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
+    line-height: 1.25;
 }
 .container {
     width: 100%;
     max-width: 980px;
     display: block;
-    outline: 1px solid black;
     margin: 0 auto;
 }
 .header {
@@ -51,18 +51,6 @@ body {
     text-align: center;
     width: 70%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 .nav {
     margin: 0 auto;
     width: 100%;
@@ -95,12 +83,159 @@ body {
     fill: #fff;
     cursor: pointer;
 }
+.main {
+    margin: 0 auto;
+    width: 100%;
+}
+.main-header {
+    width: 100%;
+    padding: 20px;
+}
+.main-header__country {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #bebebe;
+}
+.main-header__country-flag {
+    width: 35%;
+    padding-bottom: 12px;
+}
+.main-header__country-flag__img {
+    max-width: 100%;
+}
+.main-header__country-map {
+    width: 55%;
+}
+.main-header__country-map__map {
+    width: 100%;
+    max-width: 100%;
+}
+.main-header__country-flag__title {
+    font-size: 32px;
+    margin: 0;
+    font-family: 'Roboto Light';
+}
+.main-header__country-flag__desk {
+    font-size: 13px;
+    color: #5d5d5d;
+}
+.main p {
+    font-size: 16px;
+    color: #323232;
+}
+.main a {
+    color: #568ecc;
+}
+.state-system {
+    width: 100%;
+    padding: 20px;
+}
+.h2 {
+    font-family: 'Roboto Light';
+    font-size: 24px;
+    border-bottom: 1px solid #bebebe;
+    margin-bottom: 5px;
+    color: #323232;
+}
+.state-system-wrap-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.state-system-wrap-list ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    flex-basis: 65%;
+}
+.state-system-wrap-list ul li {
+    color: #323232;
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+.state-system-wrap-list__img {
+    padding: 15px 40px 0 0;
+}
+.admin-division {
+    width: 100%;
+    padding: 20px;
+}
+.admin-division-t-wrap {
+    width: 100%;
+    overflow-y: auto;
+}
+.admin-division-t {
+    margin-top: 12px;
+    border-collapse: collapse;
+    border-spacing: 1px;
+}
+.admin-division-t caption {
+    caption-side: bottom;
+    margin-top: 5px;
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-style: italic;
+    color: #323232;
+}
+.admin-division-t thead th {
+    background-color: #d8d8d8;
+    border: 1px solid #828282;
+    font-family: 'Roboto Bold';
+    font-size: 14px;
+    color: #323232;
+    text-align: center;
+    padding: 10px 50px;
+}
+.admin-division-t tbody td {
+    text-align: center;
+    font-family: 'Roboto';
+    color: #323232;
+    border: 1px solid #828282;
+    padding: 10px 50px;
+    font-size: 14px;
+}
 
 
 
 
 
 
+
+
+
+
+
+
+
+.places {
+    width: 100%;
+    padding: 20px;
+}
+.places-inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+.places-inner figure {
+    margin: 10px 20px;
+    flex-basis: 170px;
+}
+.places-inner figure a {
+    text-decoration: none;
+    display: inline-block;
+}
+.places-inner figure img {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+.places-inner figure figcaption {
+    text-align: center;
+}
+.places-inner figure figcaption a {
+    font-size: 16px;
+    color: #323232;
+}
+.places-inner figure figcaption a:hover {
+    border-bottom: 1px solid #323232;
+    cursor: pointer;
+}
 
 
 
@@ -118,7 +253,7 @@ body {
 
 
 @media (max-width: 767px) {
-    .header-top, .header-content {
+    .header-top, .header-content, .main-header {
         padding-right: 15px;
         padding-left: 15px;
     }
@@ -141,8 +276,35 @@ body {
     .nav-items__item {
         width: 100%;
     }
+    .main-header__country {
+        flex-direction: column;
+    }
+    .main-header__country-flag-wrap {
+        padding-right: 20px;
+    }
+    .main-header__country-flag {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 120px;
+
+    }
+    .main-header__country-flag__img {
+        order: 1;
+    }
+    .main-header__country-map {
+        width: 80%;
+        align-self: center;
+    }
+    .places-inner {
+        justify-content: center;
+    }
 }
 @media (max-width: 480px) {
+    .header-top, .header-content, .main-header {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
     .header-top__support {
         display: none;
     }
@@ -155,6 +317,9 @@ body {
         display: block;
     }
     .header-content__text {
+        width: 100%;
+    }
+    .main-header__country-map {
         width: 100%;
     }
 }
